@@ -1,0 +1,49 @@
+/* @theme dcp */
+
+@import "default";
+
+:root {
+  --ink: #17211b;
+  --paper: #f5f1e7;
+  --accent: #e65f3c;
+  --green: #234f3e;
+}
+
+section {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-size: 30px;
+  padding: 72px;
+}
+
+section::after {
+  color: var(--green);
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--green);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  border-left: 10px solid var(--accent);
+  font-size: 64px;
+  padding-left: 28px;
+}
+
+a {
+  color: var(--accent);
+}
+
+code {
+  background: #e7e0d1;
+}
+
+pre {
+  border-left: 6px solid var(--accent);
+}

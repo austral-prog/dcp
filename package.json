@@ -1,0 +1,12 @@
+{
+  "name": "dcp-course-material",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "marp --server slides",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}
