@@ -65,6 +65,9 @@ function materialList(category) {
     .join("");
 }
 
+const theoryList = materialList("theory");
+const practiceList = materialList("practice");
+
 writeFileSync(
   join(outputRoot, "index.html"),
   `<!doctype html>
@@ -73,41 +76,41 @@ writeFileSync(
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Presentaciones y trabajos practicos de DCP, Facultad de Ingenieria, Universidad Austral">
-    <meta name="theme-color" content="#173f35">
+    <meta name="theme-color" content="#123a8f">
     <title>DCP | Universidad Austral</title>
     <style>
-      :root { color-scheme: light; --ink: #19231f; --muted: #68716d; --paper: #f7f5ef; --line: #d8d7d0; --accent: #db5938; --green: #173f35; }
+      :root { color-scheme: light; --ink: #0f172a; --muted: #64748b; --paper: #f8fafc; --line: #e2e8f0; --surface: #eef2f7; --accent: #f97316; --accent-dark: #ea580c; --blue: #123a8f; --blue-dark: #0e2f73; --sky: #38bdf8; }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
       a { color: inherit; }
-      .topbar { background: var(--green); color: white; }
+      .topbar { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); color: white; }
       .topbar-inner, header, main, footer { width: min(1040px, calc(100% - 40px)); margin: 0 auto; }
       .topbar-inner { min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
       .topbar a { color: white; text-decoration: none; }
       .faculty { opacity: .68; font-weight: 500; }
       header { padding: 78px 0 64px; }
       .eyebrow { margin: 0 0 14px; color: var(--accent); font-size: .76rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
-      h1 { margin: 0; color: var(--green); font-size: clamp(4rem, 11vw, 7.5rem); letter-spacing: -.075em; line-height: .84; }
+      h1 { margin: 0; color: var(--blue); font-size: clamp(4rem, 11vw, 7.5rem); letter-spacing: -.075em; line-height: .84; }
       .lead { max-width: 620px; margin: 30px 0 0; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.3rem); line-height: 1.55; }
       nav { display: flex; gap: 26px; margin-top: 36px; }
-      nav a { color: var(--green); font-size: .86rem; font-weight: 800; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+      nav a { color: var(--blue); font-size: .86rem; font-weight: 800; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 5px; }
       main { padding-bottom: 96px; }
       section { padding-top: 58px; border-top: 1px solid var(--line); }
       section + section { margin-top: 72px; }
       .section-heading { display: grid; grid-template-columns: 110px 1fr; align-items: baseline; margin-bottom: 26px; }
       .section-label { color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-      h2 { margin: 0; color: var(--green); font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -.05em; }
+      h2 { margin: 0; color: var(--blue); font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -.05em; }
       .material-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
       .material { min-height: 104px; display: grid; grid-template-columns: 110px 1fr auto; align-items: center; gap: 0; border-bottom: 1px solid var(--line); }
       .number { color: var(--accent); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: .84rem; font-weight: 700; }
       h3 { margin: 0; font-size: 1.2rem; letter-spacing: -.015em; }
       .material-title p { margin: 5px 0 0; color: var(--muted); font-size: .82rem; }
       .actions { display: flex; gap: 8px; }
-      .actions a { min-width: 76px; padding: 9px 12px; color: var(--green); font-size: .78rem; font-weight: 800; text-align: center; text-decoration: none; border: 1px solid var(--green); }
-      .actions a:hover, .actions a:focus-visible { background: #e8e8df; }
-      .actions a.primary { background: var(--green); color: white; }
-      .actions a.primary:hover, .actions a.primary:focus-visible { background: #285d4f; }
+      .actions a { min-width: 76px; padding: 9px 12px; color: var(--blue); font-size: .78rem; font-weight: 800; text-align: center; text-decoration: none; border: 1px solid var(--blue); border-radius: 6px; transition: background .15s ease; }
+      .actions a:hover, .actions a:focus-visible { background: var(--surface); }
+      .actions a.primary { background: var(--blue); color: white; }
+      .actions a.primary:hover, .actions a.primary:focus-visible { background: var(--blue-dark); }
       footer { display: flex; justify-content: space-between; gap: 24px; padding: 30px 0 42px; color: var(--muted); font-size: .82rem; border-top: 1px solid var(--line); }
       footer p { margin: 0; }
       @media (max-width: 640px) {
@@ -134,25 +137,25 @@ writeFileSync(
       <h1>DCP</h1>
       <p class="lead">Presentaciones de clase y trabajos practicos, organizados en un unico lugar para consultar en linea o descargar.</p>
       <nav aria-label="Contenido">
-        <a href="#teoria">Teoria</a>
-        <a href="#practica">Practica</a>
+        ${theoryList ? `<a href="#teoria">Teoria</a>` : ""}
+        ${practiceList ? `<a href="#practica">Practica</a>` : ""}
       </nav>
     </header>
     <main>
-      <section id="teoria">
+      ${theoryList ? `<section id="teoria">
         <div class="section-heading">
           <span class="section-label">Unidad 01</span>
           <h2>Presentaciones</h2>
         </div>
-        <ol class="material-list">${materialList("theory")}</ol>
-      </section>
-      <section id="practica">
+        <ol class="material-list">${theoryList}</ol>
+      </section>` : ""}
+      ${practiceList ? `<section id="practica">
         <div class="section-heading">
           <span class="section-label">Unidad 02</span>
           <h2>Trabajos practicos</h2>
         </div>
-        <ol class="material-list">${materialList("practice")}</ol>
-      </section>
+        <ol class="material-list">${practiceList}</ol>
+      </section>` : ""}
     </main>
     <footer>
       <p>DCP &middot; Material de clase</p>
