@@ -41,21 +41,17 @@ S-04;presion;2026-09-28T08:15;101280.0;Pa
 
 Normaliza unidades (`F` y `K` a `C`, `Pa` a `hPa`), aplica la calibración de cada sensor, calcula promedios, mínimos y máximos, clasifica las alarmas en `LEVE` y `GRAVE`, imprime un reporte y deja una copia en `reporte.txt`.
 
-Este dominio nos va a acompañar el resto del trimestre.
-
 ---
 
 <!-- _class: compact -->
 
 ## Las tres reglas del TP
 
-1. **No cambies el comportamiento.** La salida tiene que ser idéntica, carácter por carácter.
-2. **No agregues tests.** Todavía no los vimos: son el TP 2.
-3. **No agregues funcionalidad.** Nada de sensores nuevos, ni archivos de configuración, ni features "que quedarían buenas".
+1. **No cambies el comportamiento.** La salida tiene que ser idéntica.
+2. **No agregues tests.** Todavía no los vimos.
+3. **No agregues funcionalidad.** Nada de sensores nuevos, ni archivos de configuración, ni cosas "que quedarían buenas".
 
 El programa **no tiene errores**. Si encontrás algo que te parece mal, anotalo, no lo arregles.
-
-> Un refactor que cambia el comportamiento no es un refactor: es un bug nuevo.
 
 ---
 
@@ -67,7 +63,7 @@ Aceptá el assignment **TP-1 Refactor**. Se crea tu repo privado con el código 
 https://classroom50.org/austral-prog/dcp/assignments/tp-1-refactor/accept
 ```
 
-Cloná, compilá y corré antes de leer una sola línea:
+Cloná, compilá y correlo:
 
 ```bash
 git clone <url-del-repositorio>
@@ -80,7 +76,7 @@ java -jar build/tp1.jar
 
 ## Paso 2 — Fijá las salidas de referencia
 
-El programa tiene **dos** salidas: la consola y el archivo `reporte.txt`. Ninguna de las dos puede cambiar.
+El programa tiene **dos** salidas: la consola y el archivo `reporte.txt`. Ninguna de las dos debería cambiar al refactorizar.
 
 ```bash
 java -jar build/tp1.jar > salida-actual.txt
@@ -211,15 +207,3 @@ Entregar es pushear a la rama principal.
 | Nombres | se entiende sin leer el cuerpo |
 | `DISENO.md` | coherente con el código entregado |
 | Prompt log | muestra criterio propio, no copiar y pegar |
-
----
-
-## Lo que viene
-
-Este mismo código sigue con vos:
-
-- **TP 2** — tests sobre el resultado de tu refactor. Si separaste bien, testear va a ser fácil; si no, lo vas a sufrir.
-- **TP 3** — vamos a meterle un bug y tus tests tienen que encontrarlo.
-- Más adelante: transformación de colecciones, modelado con objetos, y la estación expuesta como servicio.
-
-> La duplicación que dejes hoy es el bug que vas a buscar en el TP 3.
