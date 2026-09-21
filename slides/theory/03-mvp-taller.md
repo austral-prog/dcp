@@ -119,7 +119,7 @@ Checklist para traer a la conversacion:
 
 ## El trabajo final de un vistazo
 
-El MVP **es** el trabajo final de la materia. Entregables:
+El MVP es la **instancia final** de la materia: presentacion individual y demo en vivo. Entregables:
 
 - el **proyecto**: codigo del MVP, que buildea y con tests;
 - el **README** completo: nombre, problema / usuario / valor, y scope;
@@ -146,29 +146,110 @@ La politica vive en `AGENTS.md`, `CLAUDE.md` y `.github/copilot-instructions.md`
 
 ## La evaluacion
 
-La evaluacion es en la **ultima semana de cursada**.
+La instancia final del MVP es en la **ultima semana de cursada**.
 
 - Posiblemente el curso se divide en **2 grupos** para presentar en **2 dias** distintos.
 - La presentacion es **individual**.
-- Es la **unica evaluacion** de toda la cursada.
+- Se ve el **producto** y el **codigo**; los docentes hacen preguntas.
 - Si se desaprueba, hay **recuperatorio**: correcciones de los profesores y/o agregado de scope si hace falta.
 
-> Presentacion individual · unica evaluacion de la cursada.
+> Presentacion individual y demo en vivo ante los profesores.
 
 ---
 
-<!-- _class: compact -->
+## Composicion de la nota
+
+La nota final de la cursada se arma asi:
+
+| Parte | Peso |
+|---|---|
+| MVP final | **70%** |
+| Trabajos practicos | **30%** |
+
+La instancia final ocurre en la ultima semana, pero **no es la unica evaluacion**: los TPs tambien entran en la nota.
+
+> 70% MVP · 30% trabajos practicos.
+
+---
 
 ## Criterios de evaluacion
 
-Se evalua con estos cuatro criterios:
+El MVP se evalua con estos cuatro criterios:
 
-1. El **modelo** y la **resolucion** del MVP.
+1. El **modelo** y la **resolucion**.
 2. La **presentacion y demo** el dia de la entrega.
-3. La **completitud del scope** acordado al dia de la entrega: si se pudo implementar todo lo pedido.
-4. La entrega del **prompt log**: el `prompt-log` sera evaluado y es parte de la nota.
+3. La **completitud del scope** acordado.
+4. El **prompt log**.
 
-El scope que cuenta es el acordado con el profesor, no una lista improvisada el dia de la demo.
+Se ve el producto y el codigo. Los docentes preguntan sobre el codigo, el modelo, como se resolvio y paradigmas funcionales.
+
+> El scope que cuenta es el acordado con el profesor, no una lista improvisada el dia de la demo.
+
+---
+
+## 1 — Modelo y resolucion
+
+Se espera un modelo coherente con el problema y el dominio:
+
+- entidades, responsabilidades, estado y reglas o invariantes que se puedan explicar;
+- decisiones de diseño y trade-offs defendibles;
+- uso intencional de conceptos y paradigmas vistos, incluido el funcional cuando corresponda;
+- codigo legible, con pruebas o casos relevantes;
+- poder recorrer y defender el codigo propio.
+
+No hay una arquitectura unica ni una respuesta modelo. Se evalua criterio, no una receta.
+
+---
+
+## 2 — Presentacion y demo
+
+La entrega es una presentacion **individual** y una **demo en vivo**.
+
+- demo realmente en vivo, dentro del tiempo pautado;
+- relato problema → valor → flujo;
+- demostrar el funcionamiento y el alcance completo;
+- posible cambio pequeño en vivo usando AI a pedido de los profesores;
+- claridad al responder preguntas.
+
+Se ve el producto funcionando. Un video o un ensayo no reemplazan la demo.
+
+---
+
+## 3 — Completitud del scope
+
+Cuenta el scope **acordado y documentado**.
+
+- demostrar cada flujo comprometido;
+- build y ejecucion reproducibles, sin fallas criticas;
+
+Un extra no tapa un compromiso incumplido.
+
+---
+
+## 4 — Prompt log
+
+El log se evalua por trazabilidad y uso critico, no por volumen.
+
+- completo y cronologico;
+- entradas y salidas de cada herramienta de IA usada sobre el repo — Claude, OpenCode, GPT, Copilot, Cursor y equivalentes;
+- se puede seguir el hilo entre asistencia y decisiones o codigo;
+
+El prompt log se evaluará con anterioridad por los profesores para checkear que el codigo generado sea por el alumno.
+
+---
+
+## La dinamica de preguntas
+
+Los docentes pueden pedir:
+
+- navegar el codigo o el modelo;
+- justificar una decision de diseño;
+- razonar sobre casos limite, invariantes o tests;
+- relacionar la solucion con conceptos y paradigmas vistos.
+
+Se evalua comprension y criterio. No hay una unica respuesta textual ni se premia recitar de memoria.
+
+> Orientacion, no solucionario: hay que poder explicar lo propio.
 
 ---
 
