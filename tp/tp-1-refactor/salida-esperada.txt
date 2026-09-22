@@ -1,0 +1,50 @@
+=== ESTACION DE MONITOREO ===
+archivo: datos/lecturas.csv
+filas leidas: 54
+
+--- ALARMAS ---
+ALARMA LEVE S-01 2026-09-28T08:45 temperatura 28.2 C fuera de [18.0, 27.0]
+ALARMA LEVE S-02 2026-09-28T08:45 temperatura 29.5 C fuera de [18.0, 27.0]
+ALARMA LEVE S-03 2026-09-28T08:45 humedad 71.4 % fuera de [30.0, 70.0]
+ALARMA LEVE S-01 2026-09-28T09:00 temperatura 29.9 C fuera de [18.0, 27.0]
+ALARMA GRAVE S-02 2026-09-28T09:00 temperatura 32.5 C fuera de [18.0, 27.0]
+ALARMA LEVE S-03 2026-09-28T09:00 humedad 74.8 % fuera de [30.0, 70.0]
+ALARMA LEVE S-01 2026-09-28T09:15 temperatura 28.45 C fuera de [18.0, 27.0]
+ALARMA GRAVE S-02 2026-09-28T09:15 temperatura 33.5 C fuera de [18.0, 27.0]
+ALARMA LEVE S-03 2026-09-28T09:15 humedad 77.2 % fuera de [30.0, 70.0]
+ALARMA GRAVE S-01 2026-09-28T09:30 temperatura 31.1 C fuera de [18.0, 27.0]
+[descartada] fila 35: valor no numerico 's/d'
+ALARMA LEVE S-03 2026-09-28T09:30 humedad 79.5 % fuera de [30.0, 70.0]
+ALARMA LEVE S-04 2026-09-28T09:30 presion 1031.7 hPa fuera de [980.0, 1030.0]
+ALARMA GRAVE S-01 2026-09-28T09:45 temperatura 31.8 C fuera de [18.0, 27.0]
+ALARMA GRAVE S-02 2026-09-28T09:45 temperatura 34.5 C fuera de [18.0, 27.0]
+ALARMA GRAVE S-03 2026-09-28T09:45 humedad 82.1 % fuera de [30.0, 70.0]
+[descartada] fila 42: se esperaban 5 campos y hay 4
+ALARMA LEVE S-05 2026-09-28T09:45 humedad 28.4 % fuera de [30.0, 70.0]
+ALARMA LEVE S-01 2026-09-28T10:00 temperatura 17.5 C fuera de [18.0, 27.0]
+ALARMA LEVE S-02 2026-09-28T10:00 temperatura 15.5 C fuera de [18.0, 27.0]
+ALARMA LEVE S-04 2026-09-28T10:00 presion 1033.0 hPa fuera de [980.0, 1030.0]
+ALARMA LEVE S-05 2026-09-28T10:00 humedad 29.9 % fuera de [30.0, 70.0]
+[ignorada] fila 49: tipo de sensor desconocido 'caudal'
+ALARMA LEVE S-01 2026-09-28T10:15 temperatura 16.7 C fuera de [18.0, 27.0]
+ALARMA GRAVE S-02 2026-09-28T10:15 temperatura 14.0 C fuera de [18.0, 27.0]
+ALARMA LEVE S-04 2026-09-28T10:15 presion 979.7 hPa fuera de [980.0, 1030.0]
+
+--- PROMEDIOS POR MAGNITUD ---
+temperatura: n=19 prom=25.38 C min=14.0 max=34.5
+humedad: n=20 prom=53.13 % min=28.4 max=82.1
+presion: n=9 prom=1013.39 hPa min=979.7 max=1033.0
+
+--- SENSORES CON MAS ALARMAS ---
+S-01: 7 alarmas
+S-02: 6 alarmas
+S-03: 5 alarmas
+S-04: 3 alarmas
+S-05: 2 alarmas
+
+--- RESUMEN ---
+lecturas validas: 49
+alarmas: 23 (graves: 7)
+filas descartadas: 2
+tipos desconocidos: 1
+reporte escrito en reporte.txt

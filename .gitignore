@@ -2,3 +2,6 @@ node_modules/
 dist/
 .DS_Store
 .idea/
+build/
+salida-actual.txt
+reporte.txt
