@@ -1,3 +1,5 @@
+package com.university.dcp
+
 import java.io.File
 
 // Estacion de monitoreo ambiental.

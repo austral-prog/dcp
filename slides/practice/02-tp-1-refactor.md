@@ -68,8 +68,7 @@ Cloná, compilá y correlo:
 ```bash
 git clone <url-del-repositorio>
 cd <carpeta-del-assignment>
-kotlinc src/main/kotlin/Main.kt -include-runtime -d build/tp1.jar
-java -jar build/tp1.jar
+./gradlew run
 ```
 
 ---
@@ -79,7 +78,7 @@ java -jar build/tp1.jar
 El programa tiene **dos** salidas: la consola y el archivo `reporte.txt`. Ninguna de las dos debería cambiar al refactorizar.
 
 ```bash
-java -jar build/tp1.jar > salida-actual.txt
+./gradlew run -q > salida-actual.txt
 diff salida-esperada.txt salida-actual.txt
 diff reporte-esperado.txt reporte.txt
 ```
@@ -207,3 +206,17 @@ Entregar es pushear a la rama principal.
 | Nombres | se entiende sin leer el cuerpo |
 | `DISENO.md` | coherente con el código entregado |
 | Prompt log | muestra criterio propio, no copiar y pegar |
+
+---
+
+## Link del assignment
+
+```text
+https://classroom50.org/austral-prog/dcp/assignments/tp-1-refactor/accept
+```
+
+Alternativa CLI:
+
+```bash
+gh student accept austral-prog dcp tp-1-refactor
+```

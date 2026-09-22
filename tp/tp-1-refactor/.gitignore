@@ -1,3 +1,35 @@
+# Gradle
+.gradle/
 build/
+.kotlin/
+
+# Keep the Gradle wrapper jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Salidas del programa
 salida-actual.txt
 reporte.txt
+
+# IDE
+.idea/
+*.iml
+out/
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+
+# Compilados / logs
+*.class
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Entorno local / secretos
+.env
+.env.*
+*.local
+local.properties
