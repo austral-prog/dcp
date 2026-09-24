@@ -35,7 +35,7 @@ Queremos un programa de consola que permita:
 2. Seguir pidiendo gastos hasta que el usuario escriba "fin".
 3. Al terminar, mostrar el **Total** de los gastos ingresados.
 
-_Empecemos resolviéndolo a mano, con un enfoque básico y procedural._
+_Empecemos resolviéndolo a mano, con un enfoque básico e imperativo._
 
 ---
 
