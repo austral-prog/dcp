@@ -79,6 +79,9 @@ fun main() {
 }
 ```
 
+- `categorias` y `montos` son **listas mutables**: pueden crecer con `.add()`. En Python es lo mismo que un `list` y su `append`.
+- Chiches de Kotlin: `<String>` es el tipo de cada elemento (en Python no se declara). `val` no se reasigna. ``System.`in``` usa backticks porque `in` es palabra reservada.
+
 ---
 
 <!-- _class: compact -->
@@ -119,7 +122,7 @@ Finalmente imprimimos el resumen.
 
 **Reflexión del código manual:**
 - **Estructuras frágiles:** Tenemos los datos sueltos (`categorias` y `montos`). Si borramos un elemento, desalineamos el otro (Listas paralelas).
-- **Código espagueti:** Interfaz de usuario (println) mezclada con lógica de negocio (sumar) en una sola función.
+- **Código espagueti:** En `main` está todo mezclado: pedir datos, sumar y mostrar. La regla de negocio (el total) vive atada al `println`. Si mañana querés el mismo resumen en Excel, PDF o por mail, no hay un “total” reutilizable: hay que copiar o reescribir esa lógica adentro de cada salida.
 
 ---
 
@@ -167,7 +170,7 @@ Vamos a darle libertad a la IA para que escriba Kotlin idiomático. En OpenCode 
 1. **Volvé a IntelliJ** y abrí el nuevo archivo `CalculadoraIA.kt`.
 2. **Ejecutalo** (click derecho -> _Run_).
 3. **Analicemos las diferencias:**
-   - **Estructura:** Seguramente la IA ya no usó listas separadas. Habrá creado algo como `data class Gasto(...)`. La IA agrupó los datos con sentido. ¡Bien!
+   - **Estructura:** Seguramente la IA ya no usó listas separadas. Habrá creado algo como `data class Gasto(val categoria: String, val monto: Double)`. Eso modela **un** gasto: categoría y monto viajan juntos. En vez de dos listas que hay que mantener alineadas, tenés una sola lista de `Gasto`. Kotlin además te genera `equals`, `toString` y `copy`. ¡Bien!
    - **Manejo de errores:** Es probable que maneje mejor si ingresamos letras en vez de números.
    - **Velocidad:** Tardamos segundos en lugar de minutos.
 
@@ -177,9 +180,21 @@ Vamos a darle libertad a la IA para que escriba Kotlin idiomático. En OpenCode 
 
 La IA hizo un código base mucho mejor que nuestras listas paralelas. Pero... todo sigue adentro de una sola función / archivo.
 
-**¿Qué pasa si ahora le pedimos:**
-_"Agregá filtro por fechas, soporte multimoneda, guardalo en una base de datos y ponelo en una interfaz web"_?
+**El pedido malo:**
+> "Agregá filtro por fechas, soporte multimoneda, guardalo en una base de datos y ponelo en una interfaz web"
 
-Si se lo pedimos así nomás, la IA va a meter todo en el mismo lugar. Va a generar una **sopa inmanejable** que no podrás testear ni mantener.
+Si se lo pedimos así nomás, la IA va a meter todo en el mismo `main`. Va a generar una **sopa inmanejable** que no podrás testear ni mantener.
 
-> **Conclusión:** La IA sabe escribir *instrucciones* rápido y bien. Pero no sabe *diseñar arquitecturas* si vos no la guiás separando responsabilidades. Ese es el rol del Ingeniero hoy.
+---
+
+## Corregir el pedido
+
+Ese pedido ya metió fechas, moneda, base y web. No las sacamos: las **acomodamos**. Ahora hace falta una instrucción precisa para que el agente refactorice esa sopa.
+
+En OpenCode, sobre el mismo archivo:
+
+> "Refactorizá lo que acabás de generar. Un gasto (categoría, monto, fecha, moneda) va en el modelo. El total y el filtro por fechas son reglas, independientes de la consola y de la web. La persistencia solo guarda y lee gastos. La consola y la interfaz web solo muestran; no calculan ni hablan con la base. No mezcles esas responsabilidades en el `main`."
+
+Ahí el agente tiene un mapa: qué quedó del pedido anterior y **dónde tiene que vivir**. Sin eso, sigue apilando todo en el mismo lugar.
+
+> La IA escribe el código. El ingeniero le dice cómo modelarlo.
