@@ -12,7 +12,7 @@ title: Clase 1 - Ejercicio Guiado - Calculadora de Gastos
 
 ## Calculadora de Gastos (Con y Sin IA)
 
-**Práctica Clase 0 · DCP**
+**Práctica Clase 1 · DCP**
 
 ---
 
