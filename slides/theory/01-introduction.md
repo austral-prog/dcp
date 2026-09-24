@@ -22,10 +22,10 @@ Programar no es solamente escribir instrucciones que la computadora pueda ejecut
 
 Durante la materia aprenderemos a:
 
-- modelar un problema antes de implementar una solucion;
-- distribuir datos y comportamiento de manera responsable;
-- controlar estado, dependencias y errores;
-- producir codigo que otras personas puedan leer, probar y cambiar.
+- Modelar un problema antes de implementar una solucion;
+- Distribuir datos y comportamiento de manera responsable;
+- Controlar estado, dependencias y errores;
+- Producir codigo que otras personas puedan leer, probar y cambiar.
 
 > El objetivo no es solo que el programa funcione hoy, sino que siga siendo comprensible mañana.
 
@@ -43,43 +43,17 @@ La progresion sera **problema → modelo → diseño → lenguaje**.
 
 ---
 
-## Acuerdos de trabajo
-
-- Las entregas deben ser propias, reproducibles y explicables.
-- Toda fuente externa utilizada debe citarse.
-- Usar una herramienta no reemplaza comprender ni validar el resultado.
-- El codigo entregado debe poder defenderse: decisiones, limites y pruebas.
-- Las consignas de cada actividad prevalecen ante cualquier duda.
-
----
-
 ## IA: asistencia, no autoria invisible
 
 La IA generativa puede servir para explorar alternativas, explicar conceptos, revisar codigo o proponer casos de prueba.
 
 Su uso exige:
 
-- declarar **que herramienta** se utilizo y **para que**;
-- conservar los prompts e interacciones relevantes en el **Prompt Log**;
-- contrastar las respuestas con documentacion, ejecuciones y pruebas;
-- identificar que partes fueron adaptadas o descartadas;
-- asumir responsabilidad por todo lo presentado.
-
----
-
-## ¿Que debe registrar el Prompt Log?
-
-Un registro util permite reconstruir el proceso, no solo mostrar el resultado.
-
-| Momento | Evidencia minima |
-|---|---|
-| Intencion | problema o tarea que se intento resolver |
-| Consulta | prompt enviado y contexto relevante |
-| Respuesta | salida obtenida o enlace a la conversacion |
-| Evaluacion | errores, sesgos, omisiones y verificaciones |
-| Decision | que se uso, modifico o descarto y por que |
-
-El Prompt Log es parte de la **trazabilidad del aprendizaje**.
+- Declarar **que herramienta** se utilizo y **para que**;
+- Conservar los prompts e interacciones relevantes en el **Prompt Log**;
+- Contrastar las respuestas con documentacion, ejecuciones y pruebas;
+- Identificar que partes fueron adaptadas o descartadas;
+- Asumir responsabilidad por todo lo presentado.
 
 ---
 
