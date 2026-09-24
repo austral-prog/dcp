@@ -71,6 +71,29 @@ Cerralo con el profesor. El concepto y los criterios estan en la presentacion de
 
 ---
 
+<!-- _class: dense -->
+
+## Ejemplo — MVP de manejo de stock
+
+- **Problema**: un kiosco o almacen chico registra el stock en planillas o anotaciones. Hay errores, demora y no se conoce el inventario ni su valor.
+- **Persona**: duenio/a o encargado/a del local, con conocimientos digitales basicos.
+- **Valor**: centralizar el inventario, conocer existencias y valor, y anticipar faltantes.
+
+**Entra** — alcanzable en 10/11 clases (con IA):
+
+- Agregar, consultar, modificar y eliminar productos (datos basicos y precio)
+- Listar, buscar o filtrar el inventario
+- Registrar entradas y salidas; el stock se deduce de esos movimientos
+- Impedir stock negativo, egresos mayores al disponible y borrar un producto con movimientos
+- Alertar stock bajo y calcular el valor total (cantidad × precio unitario)
+- Interfaz gráfica para poder acceder a todo el scope
+- Tests unitarios mayor al 80%.
+- Test E2E para todo el scope.
+
+**Queda afuera:** proveedores y compras, facturacion y ventas, usuarios/roles, sucursales y analitica avanzada.
+
+---
+
 ## Paso 4 — Escribi la definicion en el README
 
 Completa las tres secciones del `README`, con esos nombres exactos. Reemplaza los placeholders.
