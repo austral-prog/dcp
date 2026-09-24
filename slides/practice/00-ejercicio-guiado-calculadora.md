@@ -41,26 +41,6 @@ _Empecemos resolviéndolo a mano, con un enfoque básico y procedural._
 
 <!-- _class: compact -->
 
-## Setup: Tu espacio de trabajo
-
-Antes de empezar, te recomendamos crear una carpeta central para todos los proyectos de la materia. Por ejemplo: `universidad/dcp/`.
-
-Abrí tu terminal y prepará la carpeta para este ejercicio:
-
-```bash
-# Creamos la carpeta general y la del proyecto de hoy
-mkdir -p ~/universidad/dcp/calculadora
-
-# Navegamos hacia esa carpeta
-cd ~/universidad/dcp/calculadora
-```
-
-¡Todo el trabajo de hoy lo haremos dentro de esta carpeta!
-
----
-
-<!-- _class: compact -->
-
 ## Parte 1: Resolución a mano (Sin IA)
 
 Estando en la terminal dentro de `calculadora`, **abrí IntelliJ IDEA** (o tu IDE preferido).
@@ -138,7 +118,10 @@ Finalmente imprimimos el resumen.
 
 En lugar de escribir todo a mano, vamos a delegar la construcción a **OpenCode** (el agente de IA de la materia).
 
-1. **Volvé a tu terminal**.
+1. **Creamos la carpeta del proyecto**.
+    ```bash
+    mkdir -p ~/universidad/dcp/calculadora
+    ```
 2. **Asegurate de estar en la carpeta** del proyecto:
    ```bash
    cd ~/universidad/dcp/calculadora
