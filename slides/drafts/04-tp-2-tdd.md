@@ -49,7 +49,7 @@ En el TP 1 el contrato eran los `diff`. En el TP 2 lo corre Gradle:
 2. **Verde.** Escribís el mínimo código para que pase. Nada más.
 3. **Refactor.** Mejorás el código con los tests en verde como red de seguridad.
 
-Si el test pasa en el paso rojo, no estaba probando nada nuevo.
+Si ningún test falla en el paso rojo, todavía no estás probando nada nuevo.
 
 ---
 
