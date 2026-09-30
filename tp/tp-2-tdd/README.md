@@ -121,8 +121,15 @@ verde: convierte kPa a hPa             <- el mínimo código para que pase
 refactor: unifica tabla de unidades    <- mejora sin cambiar comportamiento
 ```
 
-El commit `rojo:` tiene que fallar de verdad: si ese test ya pasaba, no estaba
-probando nada nuevo. Abrí el pull request a `main` y mergealo.
+El commit `rojo:` tiene que fallar de verdad: corré los tests antes de escribir el
+código y confirmá que al menos uno falla.
+
+> Ojo con `mbar`: probablemente su test **ya pasa** sin tocar nada, porque el programa
+> trata una unidad que no conoce como si fuera la unidad base, y 1 mbar = 1 hPa. No lo
+> borres: fija un comportamiento que antes era casualidad. Pero no alcanza como paso
+> rojo; el rojo te lo dan `kPa` y la unidad inválida.
+
+Abrí el pull request a `main` y mergealo.
 
 ## Registro de prompts (`prompt-log/`)
 

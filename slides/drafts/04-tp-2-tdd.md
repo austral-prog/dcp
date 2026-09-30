@@ -144,7 +144,7 @@ Escribí el test de `mbar` y corrélo antes de tocar el código.
 Probablemente **ya pasa**. El programa trata cualquier unidad que no conoce como si fuera la unidad base, y `mbar` equivale a `hPa`.
 
 - ¿Es un test inútil? No: fija un comportamiento que antes era casualidad.
-- ¿Es un paso rojo? Tampoco. El rojo lo da el caso de la unidad inválida.
+- ¿Alcanza como paso rojo? No. El rojo lo dan `kPa` y la unidad inválida.
 
 > Correr el test antes de escribir el código es lo que te enseña esto.
 
