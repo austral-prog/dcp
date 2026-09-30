@@ -23,6 +23,8 @@ The generated site is written to `dist/`.
 
 Add a Marp Markdown file under either `slides/theory/` or `slides/practice/`. The build discovers it automatically and adds links for both the web presentation and its `.pptx` download to the home page.
 
+Files under `slides/drafts/` are not published. Move a draft to `slides/theory/` or `slides/practice/` when it is ready to be shown.
+
 Use `---` to separate slides:
 
 ```md
