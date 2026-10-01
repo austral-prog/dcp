@@ -67,6 +67,17 @@ function materialList(category) {
 
 const theoryList = materialList("theory");
 const practiceList = materialList("practice");
+const resourcesList = `
+  <li class="material">
+    <span class="number">01</span>
+    <div class="material-title">
+      <h3>Full Walkthrough: Workflow for AI Coding</h3>
+      <p>Video de Matt Pocock sobre un flujo de trabajo para programar con IA.</p>
+    </div>
+    <div class="actions">
+      <a class="primary" href="https://www.youtube.com/watch?v=-QFHIoCo-Ko" target="_blank" rel="noopener noreferrer">Ver video</a>
+    </div>
+  </li>`;
 
 writeFileSync(
   join(outputRoot, "index.html"),
@@ -139,6 +150,7 @@ writeFileSync(
       <nav aria-label="Contenido">
         ${theoryList ? `<a href="#teoria">Teoria</a>` : ""}
         ${practiceList ? `<a href="#practica">Practica</a>` : ""}
+        <a href="#recursos">Recursos</a>
       </nav>
     </header>
     <main>
@@ -156,6 +168,13 @@ writeFileSync(
         </div>
         <ol class="material-list">${practiceList}</ol>
       </section>` : ""}
+      <section id="recursos">
+        <div class="section-heading">
+          <span class="section-label">Documentacion</span>
+          <h2>Recursos utiles</h2>
+        </div>
+        <ol class="material-list">${resourcesList}</ol>
+      </section>
     </main>
     <footer>
       <p>DCP &middot; Material de clase</p>
