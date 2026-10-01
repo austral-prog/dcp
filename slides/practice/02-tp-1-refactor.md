@@ -73,7 +73,7 @@ cd <carpeta-del-assignment>
 
 ---
 
-## Paso 2 — Fijá las salidas de referencia
+## Paso 2 — Fijá las salidas de referencia (macOS / Linux)
 
 El programa tiene **dos** salidas: la consola y el archivo `reporte.txt`. Ninguna de las dos debería cambiar al refactorizar.
 
@@ -86,6 +86,26 @@ diff reporte-esperado.txt reporte.txt
 Mientras no tengas tests, estos `diff` son lo único que te avisa si rompiste algo.
 
 **Corrélos después de cada paso del refactor.** No al final.
+
+---
+
+<!-- _class: compact -->
+
+## Verificación en Windows (PowerShell)
+
+En PowerShell, `diff` es un alias de `Compare-Object`. Si escribís
+`diff archivo1 archivo2`, compara los **nombres** de archivo, no sus contenidos.
+
+Usá `Get-Content` para comparar cada línea de las dos salidas:
+
+```powershell
+.\gradlew.bat run -q > salida-actual.txt
+Compare-Object (Get-Content salida-esperada.txt) (Get-Content salida-actual.txt)
+Compare-Object (Get-Content reporte-esperado.txt) (Get-Content reporte.txt)
+```
+
+Si los dos comandos no muestran nada, las salidas coinciden. Corrélos después de
+cada paso del refactor, igual que en macOS/Linux.
 
 ---
 
@@ -186,7 +206,8 @@ Entregar es pushear a la rama principal.
 ## Checklist de entrega
 
 - [ ] Aceptaste el TP-1 y tu repo existe en la organización.
-- [ ] Los dos `diff` (consola y `reporte.txt`) no imprimen nada.
+- [ ] Las dos comparaciones (consola y `reporte.txt`) no imprimen nada:
+  `diff` en macOS/Linux o `Compare-Object` en Windows.
 - [ ] No agregaste tests ni funcionalidad nueva.
 - [ ] Cada responsabilidad vive en un solo lugar; no queda lógica duplicada.
 - [ ] Los nombres dicen qué hace cada cosa.
@@ -200,7 +221,7 @@ Entregar es pushear a la rama principal.
 
 | Criterio | Qué miramos |
 |---|---|
-| Comportamiento preservado | los dos `diff` están vacíos |
+| Comportamiento preservado | las dos comparaciones están vacías |
 | Separación de responsabilidades | cada decisión vive en un lugar |
 | Duplicación | umbrales, calibración, conversiones y lectura, una vez |
 | Nombres | se entiende sin leer el cuerpo |
