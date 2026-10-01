@@ -170,7 +170,7 @@ writeFileSync(
       </section>` : ""}
       <section id="recursos">
         <div class="section-heading">
-          <span class="section-label">Documentacion</span>
+          <span class="section-label">Docs</span>
           <h2>Recursos utiles</h2>
         </div>
         <ol class="material-list">${resourcesList}</ol>
