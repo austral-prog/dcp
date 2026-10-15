@@ -1,0 +1,25 @@
+classDiagram
+    direction LR
+    class Alumno {
+        +String legajo
+        +String nombre
+    }
+    class Profesor {
+        +String nombre
+        +String email
+    }
+    class Materia {
+        +String codigo
+        +String nombre
+    }
+    class Cursada {
+        +String cuatrimestre
+        +int cupo
+    }
+    class Inscripcion {
+        +Double nota
+    }
+    Profesor "1" --> "*" Cursada : dicta
+    Materia "1" --> "*" Cursada : se ofrece en
+    Cursada "1" --> "*" Inscripcion : tiene
+    Alumno "1" --> "*" Inscripcion : realiza
