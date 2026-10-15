@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,6 +10,11 @@ const marp = join(root, "node_modules", ".bin", process.platform === "win32" ? "
 
 rmSync(outputRoot, { recursive: true, force: true });
 mkdirSync(outputRoot, { recursive: true });
+
+// Slides reference images as ../assets/<file>, resolved relative to dist/<category>/.
+if (existsSync(join(slidesRoot, "assets"))) {
+  cpSync(join(slidesRoot, "assets"), join(outputRoot, "assets"), { recursive: true });
+}
 
 const slides = ["theory", "practice"].flatMap((category) =>
   readdirSync(join(slidesRoot, category))
