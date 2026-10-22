@@ -157,3 +157,29 @@ Classroom 50 evalúa automáticamente tu repositorio en cada `git push`:
 - [ ] Los módulos usan funciones puras, inmutabilidad (`copy`) y pipelines (`map`, `filter`, `fold`).
 - [ ] `prompt-log/` registra las sesiones con la IA.
 - [ ] Hiciste commits chicos y descriptivos (por ejemplo, uno por módulo).
+
+---
+
+## Cómo se evalúa
+
+| Criterio | Qué miramos |
+|---|---|
+| **Tests en verde** | 100/100 en el autograder de Classroom 50 |
+| **Integridad del contrato** | Salida esperada y tests de la cátedra intactos |
+| **Modelado y estilo funcional** | Uso de `require`, `sealed class`, `copy`, `map`, `filter` y `fold` |
+| **Flujo de trabajo** | Commits y ramas claras por módulo |
+| **Prompt log** | Registro honesto de cómo guiaste a la IA para transformar el código |
+
+---
+
+## Link del assignment
+
+```text
+https://classroom50.org/austral-prog/dcp/assignments/tp-4-funcional/accept
+```
+
+Alternativa CLI:
+
+```bash
+gh student accept austral-prog dcp tp-4-funcional
+```
