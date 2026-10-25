@@ -4,7 +4,9 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "marp --server slides",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "grade:tp1": "node evaluation/grade-tp1.mjs",
+    "grade:tp2": "node evaluation/grade-tp2.mjs"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3"

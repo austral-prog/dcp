@@ -1,0 +1,9 @@
+REPORTE DE LA ESTACION DE MONITOREO
+===================================
+temperatura: n=1 prom=21.3 C min=21.3 max=21.3
+humedad: n=1 prom=50.0 % min=50.0 max=50.0
+presion: n=5 prom=1000.04 hPa min=950.0 max=1035.0
+
+lecturas validas: 7
+alarmas: 2 (graves: 1)
+filas descartadas: 0

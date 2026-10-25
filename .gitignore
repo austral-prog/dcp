@@ -7,3 +7,4 @@ build/
 salida-actual.txt
 reporte.txt
 .github/agents/
+evaluation/output/

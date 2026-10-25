@@ -1,0 +1,22 @@
+=== ESTACION DE MONITOREO ===
+archivo: datos/lecturas.csv
+filas leidas: 10
+
+--- ALARMAS ---
+ALARMA LEVE S-05 2026-10-01T08:15 presion 1035.0 hPa fuera de [980.0, 1030.0]
+ALARMA GRAVE S-05 2026-10-01T08:30 presion 950.0 hPa fuera de [980.0, 1030.0]
+
+--- PROMEDIOS POR MAGNITUD ---
+temperatura: n=1 prom=21.3 C min=21.3 max=21.3
+humedad: n=1 prom=50.0 % min=50.0 max=50.0
+presion: n=5 prom=1000.04 hPa min=950.0 max=1035.0
+
+--- SENSORES CON MAS ALARMAS ---
+S-05: 2 alarmas
+
+--- RESUMEN ---
+lecturas validas: 7
+alarmas: 2 (graves: 1)
+filas descartadas: 0
+tipos desconocidos: 0
+reporte escrito en reporte.txt
