@@ -1,0 +1,6 @@
+=== Simulación Smart Home ===
+Casa: Hogar Central
+Dispositivos registrados: 3
+Dispositivos encendidos tras encenderTodo(): 3
+Simulando escenario de control...
+Fin de la simulación.
