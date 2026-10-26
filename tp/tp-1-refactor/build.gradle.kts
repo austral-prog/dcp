@@ -24,6 +24,8 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    inputs.dir("datos")
+    inputs.files("salida-esperada.txt", "reporte-esperado.txt")
     testLogging {
         events("passed", "skipped", "failed")
         showExceptions = true

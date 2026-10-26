@@ -1,0 +1,9 @@
+# Escenario de la catedra (TP 2, Parte 2)
+# formato: id_sensor;tipo;timestamp;valor;unidad
+id_sensor;tipo;timestamp;valor;unidad
+S-01;temperatura;2026-10-01T08:00;21.0;C
+S-03;humedad;2026-10-01T08:00;50.0;%
+S-04;presion;2026-10-01T08:00;1013.0;mbar
+S-05;presion;2026-10-01T08:15;1040.0;mbar
+S-05;presion;2026-10-01T08:30;960.5;mbar
+S-03;presion;2026-10-01T08:45;1000.0;hPa

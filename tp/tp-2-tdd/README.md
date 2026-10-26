@@ -27,16 +27,18 @@ Kotlin/JVM 21 con Gradle Wrapper, igual que el TP 1. Requisitos: **JDK 21**.
 Los tests usan `kotlin.test` sobre JUnit 5; ya está configurado en `build.gradle.kts`.
 Van en `src/test/kotlin/com/university/dcp/`.
 
-## El test de contrato
+## Tests provistos por la cátedra
 
-`src/test/kotlin/com/university/dcp/ContratoSalidaTest.kt` lo da la cátedra. Corre el
-programa completo y compara la consola y `reporte.txt` con `salida-esperada.txt` y
-`reporte-esperado.txt`. Reemplaza a los `diff` del TP 1.
+La cátedra entrega el proyecto con dos suites de pruebas en `src/test/kotlin/com/university/dcp/`:
 
-**No lo modifiques.** Tiene que estar en verde en cada commit de `main`.
+- `ContratoSalidaTest.kt`: corre el programa completo sobre `datos/lecturas.csv` y compara la consola y `reporte.txt` con `salida-esperada.txt` y `reporte-esperado.txt` (este test da verde desde el inicio).
+- `NuevasUnidadesTest.kt`: valida los escenarios de la Parte 2 (conversión de presión en `kPa` y `mbar`, y descarte de unidades inválidas para magnitudes conocidas). **Estos tests fallan en el código de partida** y deben quedar en verde al implementar la nueva funcionalidad con TDD.
 
-Llama a `main()` sin argumentos. Si tu `main` recibe `args`, dejá también una versión
-sin argumentos.
+**No los modifiques.** Correlos con:
+
+```bash
+./gradlew test
+```
 
 ## Paso 1 — Traé tu código del TP 1
 
@@ -152,8 +154,8 @@ Entregar es tener los dos pull requests mergeados en `main`.
 
 ## Checklist de entrega
 
-- [ ] `./gradlew test` da verde en `main`, incluido el test de contrato.
-- [ ] `ContratoSalidaTest.kt`, `salida-esperada.txt` y `reporte-esperado.txt` no cambiaron.
+- [ ] `./gradlew test` da **verde** en `main`, incluyendo `ContratoSalidaTest` y `NuevasUnidadesTest`.
+- [ ] Los tests de la cátedra (`ContratoSalidaTest.kt`, `NuevasUnidadesTest.kt`), `salida-esperada.txt` y `reporte-esperado.txt` no cambiaron.
 - [ ] `CASOS.md` tiene al menos tres casos felices, tres de borde y tres inválidos.
 - [ ] Cada caso de `CASOS.md` tiene al menos un test.
 - [ ] `agente-tests.md` está completo.

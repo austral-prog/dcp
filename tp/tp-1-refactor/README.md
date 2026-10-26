@@ -17,7 +17,9 @@ No hace falta instalar Gradle de forma global: usá `./gradlew` (macOS/Linux) o
 `.\gradlew.bat` (Windows). Requisitos: **JDK 21**.
 
 ```bash
-./gradlew run            # macOS / Linux
+./gradlew test           # corre la suite de tests automatizados (macOS / Linux)
+.\gradlew.bat test       # Windows
+./gradlew run            # ejecuta el programa (macOS / Linux)
 .\gradlew.bat run        # Windows
 ```
 
@@ -28,10 +30,20 @@ Para compilar sin ejecutar:
 .\gradlew.bat build      # Windows
 ```
 
-## Salidas de referencia
+## Tests y salidas de referencia
 
-El programa produce **dos** salidas y el refactor no puede cambiar ninguna de las dos:
-lo que imprime por consola y el archivo `reporte.txt`. Para verificar:
+El repositorio incluye tests automatizados en `src/test/kotlin/com/university/dcp/`:
+
+- `ContratoSalidaTest.kt`: valida que la ejecución del programa mantenga intactas las dos salidas de referencia (consola y `reporte.txt`).
+- `RefactorEntregaTest.kt`: valida que el código no haya quedado en el estado de partida sin refactorizar (si no modificaste la plantilla, este test falla).
+
+Podés correr los tests en cualquier momento con:
+
+```bash
+./gradlew test
+```
+
+También podés verificar manualmente con `diff` si lo preferís:
 
 ```bash
 ./gradlew run -q > salida-actual.txt
@@ -72,8 +84,8 @@ política completa está en [`AGENTS.md`](AGENTS.md); el formato de cada entrada
 
 ## Checklist de entrega
 
-- [ ] Los dos `diff` (consola y `reporte.txt`) no imprimen nada.
-- [ ] No agregaste tests ni funcionalidad nueva.
+- [ ] `./gradlew test` da **verde** en la rama principal.
+- [ ] No modificaste ningún archivo en `src/test/`, ni `salida-esperada.txt`, ni `reporte-esperado.txt`.
 - [ ] Cada responsabilidad vive en un solo lugar; no queda lógica duplicada.
 - [ ] Los nombres dicen qué hace cada cosa.
 - [ ] `DISENO.md` tiene responsabilidades, diagrama y hallazgos.
