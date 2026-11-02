@@ -90,12 +90,12 @@ Lo que hace posible componer son los **tipos**: la salida de un paso tiene que e
 Kotlin no trae un operador de composición, pero se escribe en tres líneas:
 
 ```kotlin
-infix fun <A, B, C> ((A) -> B).luego(g: (B) -> C): (A) -> C =
+infix fun <A, B, C> ((A) -> B).then(g: (B) -> C): (A) -> C =
     { a -> g(this(a)) }
 ```
 
 ```kotlin
-val notaAEtiqueta = ::porcentaje luego ::etiqueta
+val notaAEtiqueta = ::porcentaje then ::etiqueta
 
 notaAEtiqueta(8) // "80%"
 ```
